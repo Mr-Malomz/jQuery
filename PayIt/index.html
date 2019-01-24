@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PayIT | Payment made Easy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+</head>
+
+<body>
+    <div class="main-img"></div>
+    <div class="main-cont">
+        <header>
+            <a href="#" id="mob-nav"><i class="zmdi zmdi-menu zmdi-hc-2x"></i></a>
+            <nav class="main-bar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="pay"><a href="#">Payment</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#" id="mobi-1">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#" class="pay-1 mobi">Payment</a>
+        </div>
+
+        <div class="text-cont">
+            <h1>CheckOut</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem incidunt facere, aut eum itaque
+                molestiae inventore nostrum culpa? !</p>
+        </div>
+
+        <div class="container">
+            <div class="section-1">
+                <div class="icon"><i class="zmdi zmdi-toys zmdi-hc-2x"></i></div>
+                <p id="topee">Input Card Details</p>
+                <p id="amt">&#8358;<span id="final-amt"></span></p>
+            </div>
+            <div class="section-2">
+                <form action="#" onsubmit="return false">
+                    <div class="num">
+                        <p id="focus-card"></p>
+                        <i class="zmdi zmdi-card zmdi-hc-2x"></i><input type="number" required name="card-no" id="card-no"
+                            placeholder="Card Number">
+                        <span><img src="" alt="" style="height: 20px; "></span>
+
+                    </div>
+
+                    <div class="num">
+                        <p id="focus-date"></p>
+                        <i class="zmdi zmdi-calendar zmdi-hc-2x"></i><input type="text" name="card-date" required id="card-date"
+                            onblur="(this.type='month')" onfocus="(this.type='month')" placeholder="MM--YYYY">
+                    </div>
+                    <div class="date-warning">Card Expiry date cannot be back dated</div>
+                    <div class="num">
+                        <p id="focus-cvv"></p>
+                        <i class="zmdi zmdi-lock-outline zmdi-hc-2x"></i><input type="number" name="card-cvv" required
+                            id="card-cvv" placeholder="CVV">
+                    </div>
+                    <input type="submit" name="submit" value="Pay" id="payOn">
+                    <input type="submit" name="submit" value="Cancel" id="Close">
+                </form>
+                <div class="img">
+                    <img src="https://drive.google.com/uc?id=1bqUr0NyK9X97yY3JOyDb7ByUbwPvw9u_" alt="mastercad">
+                    <img src="https://drive.google.com/uc?id=1kxRBi7GoYwP4HL9zpQx-hfUTilht3HIC" alt="vervecad">
+                    <img src="https://drive.google.com/uc?id=1hgtNaIjzct5OdAH4bdXIqsRpEQ6dvyYo" alt="vervecad">
+                </div>
+            </div>
+        </div>
+        <div class="alert" id="alert"><i class="zmdi zmdi-check-square zmdi-hc-2x" style="color: green;"></i><span id="main">
+                Payment Code: <span id="randm" style="color:red"></span></span></div>
+        <div class="alert" id="alert-none"><i class="zmdi zmdi-minus-circle zmdi-hc-2x" style="color: red;"></i><span id="main">Transaction Cancelled</span></div>
+
+        <div class="landing-page">
+            <div class="landing-header">
+                <h3>Card Payment</h3>
+            </div>
+            <div class="landing-content">
+                <form action="landing" class="form-land">
+                    <label for="amount">Amount *</label> <br>
+                    <div class="warning">Amount is required</div>
+                    <input type="number" name="amount" id="amount">
+                    <div id="card-warning">Select Card Type</div>
+                    <select name="card-type" id="card-type" class="card-des" required>
+                        <option value="def">--Select a Card</option>
+                        <option value="MasterCad">MasterCard</option>
+                        <option value="Verve">Verve</option>
+                        <option value="visa">VISA</option>
+                    </select>
+                </form>
+                <div class="checkout"><button id="clikPay"> Pay <span id="check-amt"></span></button></div>
+            </div>
+
+        </div>
+        <footer>
+            <div></div>&copy; Demola Malomo
+        </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
